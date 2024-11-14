@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги - Магазин косметики</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+        <h1>Наши услуги</h1>
+    </header>
+
+    <main>
+        <section id="services">
+            <h2>Уходовая косметика</h2>
+            <div class="product-card">
+                <img src="krem.jpg" alt="Крем для лица" class="product-image">
+                <h3>Крем для лица</h3>
+                <p>Увлажняющий крем для ежедневного использования.</p>
+                <button onclick="openFeedbackForm('Крем для лица')">Купить</button>
+            </div>
+            <div class="product-card">
+                <img src="tonnik.jpg" alt="Тоник для лица" class="product-image">
+                <h3>Тоник для лица</h3>
+                <p>Очищающий тоник для свежести кожи.</p>
+                <button onclick="openFeedbackForm('Тоник для лица')">Купить</button>
+            </div>
+
+            <h2>Декоративная косметика</h2>
+            <div class="product-card">
+                <img src="ton.jpg" alt="Тональный крем" class="product-image">
+                <h3>Тональный крем</h3>
+                <p>Легкий тональный крем для идеального тона.</p>
+                <button onclick="openFeedbackForm('Тональный крем')">Купить</button>
+            </div>
+            <div class="product-card">
+                <img src="pomada.jpg" alt="Помада" class="product-image">
+                <h3>Помада</h3>
+                <p>Яркая помада для выразительных губ.</p>
+                <button onclick="openFeedbackForm('Помада')">Купить</button>
+            </div>
+
+            <h2>Профессиональная косметика</h2>
+            <div class="product-card">
+                <img src="maska.jpg" alt="Маска для лица" class="product-image">
+                <h3>Маска для лица</h3>
+                <p>Профессиональная маска для глубокого очищения.</p>
+                <button onclick="openFeedbackForm('Маска для лица')">Купить</button>
+            </div>
+            <div class="product-card">
+                <img src="savotka.jpg" alt="Сыворотка" class="product-image">
+                <h3>Сыворотка</h3>
+                <p>Сыворотка для восстановления кожи.</p>
+                <button onclick="openFeedbackForm('Сыворотка')">Купить</button>
+            </div>
+        </section>
+
+        <!-- Форма обратной связи -->
+        <div id="feedback-form">
+            <form id="form">
+                <h2>Обратная связь</h2>
+                <label for="name">Имя:</label>
+                <input type="text" id="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                
+                <label for="phone">Номер телефона:</label>
+                <input type="tel" id="phone" required>
+                
+                <input type="hidden" id="product-name" value="">
+                
+                <button type="submit">Отправить</button>
+                <button type="button" onclick="closeFeedbackForm()">Закрыть</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Магазин косметики. Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
